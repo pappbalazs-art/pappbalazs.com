@@ -31,7 +31,7 @@ Here I will list what technologies I use for each component of the site.
 
 ## API endpoints
 
-Here I will list all of the API endpoints, I will need to create. (Mostly for myself, to easly keep track of them.)
+Here I will list all of the API endpoints, I will need to create. (Mostly for myself, to easily keep track of them.)
 
 > **TODO:** Write down all the other endpoints.
 
