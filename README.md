@@ -21,8 +21,20 @@ This is the place where I will track the status of the development. I just simpl
 
 Here I will list what technologies I use for each component of the site.
 
+> **TODO:** Update the list with the frontend technologies.
+
 | Component | Technology                                                                  |
 | :-------- | :-------------------------------------------------------------------------- |
 | Backend   | PHP, custom made, I promise it will be very eclectic.                       |
 | Database  | MySQL                                                                       |
 | Frontend  | Haven't decided yet. Maybe Vue, I used that the last time (who knows when). |
+
+## API endpoints
+
+Here I will list all of the API endpoints, I will need to create. (Mostly for myself, to easly keep track of them.)
+
+> **TODO:** Write down all the other endpoints.
+
+| Endpoint      | Description                                                            |
+| :------------ | :--------------------------------------------------------------------- |
+| POST /message | Sending a message to my personal email address (hello@pappbalazs.com). |
