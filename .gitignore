@@ -1,2 +1,5 @@
 */**/.env
 .DS_Store
+
+# Do not upload the Google Firebase config file
+client/firebase.config.js
