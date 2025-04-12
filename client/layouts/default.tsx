@@ -1,14 +1,16 @@
 import { Head } from "./head";
 
-import { Navbar } from "@/components/navbar";
+import { AdminNavbar } from "@/components/admin-navbar";
 
 export default function DefaultLayout({
 	children,
 	isCentered,
+	isAdminNavbar,
 	withoutNavbar,
 }: {
 	children: React.ReactNode;
 	isCentered?: Boolean;
+	isAdminNavbar?: Boolean;
 	withoutNavbar?: Boolean;
 }) {
 	children = !isCentered ? (
@@ -24,7 +26,7 @@ export default function DefaultLayout({
 	return (
 		<div className="relative flex flex-col h-screen">
 			<Head />
-			{!withoutNavbar && <Navbar />}
+			{!withoutNavbar && isAdminNavbar && <AdminNavbar />}
 			<main className="container mx-auto max-w-7xl px-6 flex-grow pt-16">
 				{children}
 			</main>
