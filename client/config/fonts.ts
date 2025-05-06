@@ -1,6 +1,6 @@
-import { Inter as FontSans } from "next/font/google";
+import { Outfit } from "next/font/google";
 
-export const fontSans = FontSans({
+export const outfit = Outfit({
 	subsets: ["latin"],
-	variable: "--font-sans",
+	variable: "--font-outfit",
 });
