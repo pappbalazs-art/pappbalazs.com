@@ -1,46 +1,57 @@
 @import "../../styles/breakpoints.scss";
 
 .navbar__toggle {
+	position: relative;
+	top: 0;
+	width: 30px;
+	height: 20px;
 	display: none;
+	background: transparent;
+	padding: 5px;
+	cursor: pointer;
+	z-index: 2;
 
 	@include breakpoint(medium) {
-		display: flex;
-		flex-direction: column;
-		gap: 7px;
-		background: transparent;
-		padding: 5px;
-		cursor: pointer;
-		z-index: 2;
+		display: inherit;
 	}
 }
 
 [class*="navbar__toggle__line"] {
-	position: relative;
+	display: block;
+	position: absolute;
+	left: 0;
 	width: 30px;
 	height: 2px;
 	background: #ffffff;
-	transition: all 0.15s ease-in-out;
+	transform: rotate(0);
+	transition: transform 0.2s ease-in-out, top 0.2s ease-in-out, opacity 0.2s;
 }
 
 .navbar__toggle__line {
 	&--top {
-		transform-origin: top left;
+		top: 0;
+	}
+
+	&--middle {
+		top: 9px;
 	}
 
 	&--bottom {
-		transform-origin: bottom left;
+		top: 18px;
 	}
 
 	.navbar__wrapper.open &--top {
-		transform: rotate(45deg);
-		translate: 0 -2px;
+		top: 9px;
+		transform: rotate(135deg);
 	}
 
 	.navbar__wrapper.open &--middle {
-		transform: scale(0);
+		transform: scaleX(0);
+		opacity: 0;
 	}
 
 	.navbar__wrapper.open &--bottom {
-		transform: rotate(-45deg);
+		transform: rotate(-135deg);
+		top: 9px;
 	}
 }
