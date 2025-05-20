@@ -1,3 +1,9 @@
 export default function Home() {
-	return <p>This is the home page.</p>;
+	return (
+		<>
+			<section className="" id="work">
+				Work
+			</section>
+		</>
+	);
 }

@@ -1,8 +1,11 @@
-import "@/styles/globals.css";
+import "@/styles/normalize.scss";
+import "@/styles/globals.scss";
 import type { Metadata, Viewport } from "next";
-import clsx from "clsx";
 
-import { outfit } from "@/config/fonts";
+import "./layout.scss";
+
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
 	title: "Papp Balázs",
@@ -49,10 +52,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body
-				className={clsx(outfit.className, "min-h-screen anitaliased")}
-			>
-				{children}
+			<body>
+				<Navbar />
+
+				<main className="wrapper">{children}</main>
+
+				<Footer />
 			</body>
 		</html>
 	);

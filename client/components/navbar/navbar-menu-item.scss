@@ -1,0 +1,9 @@
+@import "../../styles/breakpoints.scss";
+
+.navbar__menu__item {
+	height: 70px;
+
+	@include breakpoint(medium) {
+		padding: 1rem 0;
+	}
+}
